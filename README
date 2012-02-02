@@ -1,3 +1,6 @@
-This is the exmaple firmware for my article posted on http://gpio.kaltpost.de/?page_id=412
+This is the exmaple firmware for my article posted on http://gpio.kaltpost.de/?page_id=412.
+
+The tutorial describes how to drive two servos (e.g. for a pan-tilt unit) through a PWM 
+signal on an ARM Conrtex-M3.
 
 To built the exmaple you need an arm cross compiler and libopencm3 installed.
