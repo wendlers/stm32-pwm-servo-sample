@@ -1,0 +1,3 @@
+This is the exmaple firmware for my article posted on http://gpio.kaltpost.de/?page_id=412
+
+To built the exmaple you need an arm cross compiler and libopencm3 installed.
