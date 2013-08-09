@@ -8,18 +8,18 @@
 PREFIX	?= arm-none-eabi-
 # PREFIX	?= arm-elf-
 
-CC			 = $(PREFIX)gcc
-LD			 = $(PREFIX)gcc
+CC		 = $(PREFIX)gcc
+LD		 = $(PREFIX)gcc
 OBJCOPY		 = $(PREFIX)objcopy
 OBJDUMP		 = $(PREFIX)objdump
 
 INCDIR		+= -I./include -I$(HOME)/sat/arm-none-eabi/include
 CFLAGS		+= -Os -g -Wall -Wextra -fno-common -mcpu=cortex-m3 -mthumb -msoft-float -MD $(INCDIR) -DSTM32F1
 
-LDSCRIPT		 = $(BINARY).ld
+LDSCRIPT	 = $(BINARY).ld
 LIBDIR		 = -L$(HOME)/sat/arm-none-eabi/lib -L$(HOME)/sat/arm-none-eabi/lib/stm32/f1 
-LIBS			 = -lopencm3_stm32f1 
-LDFLAGS		+= $(LIBDIR) $(LIBS) -T$(LDSCRIPT) -nostartfiles -Wall,--gc-sections -mthumb -march=armv7 -mfix-cortex-m3-ldrd -msoft-float 
+LIBS		 = -lopencm3_stm32f1 
+LDFLAGS		+= $(LIBDIR) $(LIBS) -T$(LDSCRIPT) -nostartfiles -Wall -mthumb -march=armv7 -mfix-cortex-m3-ldrd -msoft-float 
 
 # where to put generated binaries to 
 BINDIR		?= ../bin
